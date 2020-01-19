@@ -1,7 +1,5 @@
-﻿using System;
+﻿using Octokit;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace AuthorizeWithGithub.Models
 {
@@ -14,5 +12,7 @@ namespace AuthorizeWithGithub.Models
         public string GitHubName { get; set; }
 
         public string GitHubUrl { get; set; }
+
+        public IReadOnlyList<Repository> Repositories { get; set; }
     }
 }

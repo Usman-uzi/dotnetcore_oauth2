@@ -52,7 +52,7 @@ namespace AuthorizeWithGithub
                options.ClaimActions.MapJsonKey("urn:github:login", "login");
                options.ClaimActions.MapJsonKey("urn:github:url", "html_url");
                options.ClaimActions.MapJsonKey("urn:github:avatar", "avatar_url");
-
+               options.SaveTokens = true; // to save token in context to be use from within action in controller
                options.Events = new OAuthEvents
                {
                    OnCreatingTicket = async context =>
